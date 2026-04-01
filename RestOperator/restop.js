@@ -26,3 +26,34 @@ function multi(num,...rest){
     return rest.map(rest=>num*rest)
 }
 console.log('The multiplication of the number is:',multi(9,3,4,5,6,8,9,6))
+
+
+//practice question 1
+const user={
+    id:101,
+    name:'Sohan',
+    email:'sohanachhami55@gmail.com',
+    passwordd:'1234567'
+}
+const {passwordd,...userwithoutpassword}=user 
+console.log('userwithout password is:',userwithoutpassword)
+
+//practice question 2
+function sumEvenNumbers(...numbers){
+    const evennumbers=numbers.filter(num=>num%2==0)
+    return evennumbers.reduce((num,acc)=>{
+    return num +acc
+   },0)
+}
+console.log(sumEvenNumbers(1,2,3,4,5,6,7,8,9,10))
+//practice question 7 
+const user4 = {
+  id: 101,
+  name: "Sohan",
+  email: "sohan@gmail.com",
+  password: "123456",
+  role: "admin"
+};
+
+const {password,role,...userwithoutpassrole}=user4 
+console.log('User without password and role is:',userwithoutpassrole)
