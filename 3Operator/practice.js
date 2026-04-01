@@ -27,3 +27,5 @@ function calculateFare(distanceKm,timeMinutes,isNight,isPremium){
 }
 
 console.log('Final Fare price:',calculateFare(12,30,true,true))
+
+

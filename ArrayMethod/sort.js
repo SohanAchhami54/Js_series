@@ -11,4 +11,3 @@ const result3=array.sort((a,b)=>b-a);
 console.log(result3);
 
 //Sorting objects by property
-let studn
