@@ -1,28 +1,25 @@
-const fruits=[1,2,3,4,5,6]
-const copyfruits=[...fruits]
-console.log(copyfruits)
+const a=[1,2,3,4,5]
+const b=[...a,6,7,8,9,10] 
+console.log('THe value of finalarray is:',b)
 
 
-const array1=[1,2,3,4,5,6,7,8,9,10]
-const array2=[11,12,13,14,15,16,17]
-const finalarray1=[...array1,...array2]
-console.log(finalarray1)
+//merging array 
+const a1=[1,2,3,4,5,6,7,8,9,10] 
+const a2=[11,12,13,14,25,15] 
+const mergedArray=[...a1,...a2] 
+console.log('MergedArray is:',mergedArray)
 
 
-const nums=[1,2,3,4,5]
-const finalarray2=[0,...nums,6,7,8]
-console.log(finalarray2)
-
-
-
-const user={id:1,name:'Sohan Achhami'}
-const object1={...user}
-console.log(object1)
-
-
-const user1={id:2,name:'Smaran Rawal'}
-const user2={id:3,name:'Uttam K.C.'}
-const finalObject={...user1,...user2}
-console.log(finalObject)
-
-
+//merging object
+const obj1={
+    name:'Smaran',
+    age:22, 
+    nationality:'Nepali'
+}
+const obj2={
+    fullname:'Uttam',
+    ageno:23,
+    nationality:'Nepali'
+}
+const finalObject={...obj1,...obj2}
+console.log('The value of finalObject is:',finalObject)

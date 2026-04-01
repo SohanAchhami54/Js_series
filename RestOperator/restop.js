@@ -1,15 +1,28 @@
-function array(...num){
-    return num.reduce((acc,num)=>acc+num,0)
+function sum(...num){ //this is the rest operator.
+  return  num.reduce((num,acc)=> num+acc,0)
+} 
+console.log('The Sum of the number is:',sum(1,2,3,4,5))
+
+
+function peoplename(greeting,...restname){
+    return `${greeting} and ${restname.join(' and ')}`
 }
-console.log(array(1,2,3,4,5,6,7,8,9,10))
-
-//this is  object destructuring in the object using rest operator
-const object={id:1,name:'Smaran Rawal',address:'Tikapur',sex:'male'}
-const {address,...rest}=object;
-console.log(address)
+console.log('The name of the people is:',peoplename('sohan','prabhat','sandesh'))
 
 
-//this is array destructuring in the array using the rest operator 
-const array1=['Smaran','Uttamm','Sohan','Bibek','Prabhat','Pranaya']
-const [arr1,arr2,...rest1]=array1
-console.log(rest1)
+const obj={
+    name:'Pranaya',
+    dob:2003,
+    address:'Bhanjang',
+    Nationality:'Nepali'
+}
+const {name,...rest}=obj 
+console.log('The name of the person is:',name)
+console.log('The rest of the characterisics of the person is:',rest)
+
+
+//let's find the multiplication of the number 
+function multi(num,...rest){
+    return rest.map(rest=>num*rest)
+}
+console.log('The multiplication of the number is:',multi(9,3,4,5,6,8,9,6))
