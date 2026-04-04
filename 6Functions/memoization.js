@@ -11,13 +11,10 @@ function memoize(func){
        }
     }
 }
-  
-
 function calc(num){
     console.log('Computing...')
     return num*2
 }
-
 let val=memoize(calc)
 console.log(val(7))
 console.log(val(7))
