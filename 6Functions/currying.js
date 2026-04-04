@@ -36,3 +36,4 @@ const user=createApi('https://api.example.com')
 console.log(user('user'))
 console.log(user('admin'))
 console.log(user('host'))
+

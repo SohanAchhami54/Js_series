@@ -13,4 +13,17 @@ array.forEach(num=>{
    console.log(num+2)
 })
 
+//map function 
+const arr1=[1,2,3,4,5,76]
+const value1=arr1.map((num)=>num*2) 
+console.log('Value 1:',value1)
 
+//filter function 
+const arr2=[23,77,766,454,2347,55]
+const value2=arr2.filter((num)=>num%2==0) 
+console.log('Value 2:',value2)
+
+//reduce function 
+const arr3=[1,2,3,4,5]
+const value3=arr3.reduce((num,acc)=>num+acc,0)
+console.log('Value 3:',value3)
