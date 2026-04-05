@@ -28,12 +28,10 @@ sayHello('Smaran')
 //this is another example of currying in js 
 function createApi(baseUrl){
     return function(endpoint){
-       return `${baseUrl}/${endpoint}`
+         return `${baseUrl}/${endpoint}`
     }
 }
 
 const user=createApi('https://api.example.com')
-console.log(user('user'))
 console.log(user('admin'))
 console.log(user('host'))
-

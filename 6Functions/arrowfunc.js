@@ -27,3 +27,20 @@ console.log('Value 2:',value2)
 const arr3=[1,2,3,4,5]
 const value3=arr3.reduce((num,acc)=>num+acc,0)
 console.log('Value 3:',value3)
+
+
+//practice question of higher order function and closure also
+function discountCalculator(discount){
+   return function (price){
+      return price-price*(discount/100)
+   }
+}
+
+
+let ten=discountCalculator(10)
+console.log('10% discount is:',ten(2000))
+let twenty=discountCalculator(20) 
+console.log('20% discount is:',twenty(2000))
+
+
+
