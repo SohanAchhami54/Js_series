@@ -47,13 +47,31 @@ function sumEvenNumbers(...numbers){
 }
 console.log(sumEvenNumbers(1,2,3,4,5,6,7,8,9,10))
 //practice question 7 
-const user4 = {
-  id: 101,
-  name: "Sohan",
-  email: "sohan@gmail.com",
-  password: "123456",
-  role: "admin"
-};
+const userData={
+    name:'Sita', 
+    email:'sita@gmail.com', 
+    password:'1234'
+}
+const {password,...userWithoutPassword}=userData
+console.log('User without password is:',userWithoutPassword)
+//practice question 8 
+function getUsers(...num){
+    return num 
+}
+console.log(getUsers(1,2,3,4,5,6,7,8,9,10))
 
-const {password,role,...userwithoutpassrole}=user4 
-console.log('User without password and role is:',userwithoutpassrole)
+
+//practice question 9 
+function logger(err,...rest) {
+  console.log (`LOG TYPE:${err} | Messages:`,rest)
+}
+logger("ERROR", "File not found", "Line 23", "server.js");
+
+
+//practice question 10 
+function processOrder(lapt,mous,...rest){
+    console.log(lapt) 
+    console.log(mous) 
+    console.log(rest)
+}
+processOrder('Laptop','Mouse','Keyboard','Monitor')

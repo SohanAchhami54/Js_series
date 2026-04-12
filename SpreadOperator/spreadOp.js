@@ -4,12 +4,10 @@ console.log('THe value of finalarray is:',b)
 
 
 //merging array 
-const a1=[1,2,3,4,5,6,7,8,9,10] 
-const a2=[11,12,13,14,25,15] 
-const mergedArray=[...a1,...a2] 
-console.log('MergedArray is:',mergedArray)
-
-
+const electronics=['laptop','phone','tablet'] 
+const clothing=['shirt','pants','jacket'] 
+const fashion=[...electronics,...clothing] 
+console.log('Merging electronics and clothing is:',fashion)
 //merging object
 const obj1={
     name:'Smaran',
@@ -28,15 +26,15 @@ console.log('The value of finalObject is:',finalObject)
 
 //practice question 1
 const user={
-    name:'Sohan',
-    address:{
-        city:'Kathmandu',
-        country:'Nepal'
-    }
+    name:'Ram',
+    age:25, 
+    email:'ram@old.com' 
 }
+const newUser={...user,email:'ram@new.com'} 
+console.log('The value of the user with changed email is:',newUser)
 
-const newObj={...user,address:{...user.address,city:'Pokhara'}}
-console.log(newObj)
+
+
 
 //practive question 2
 const defaultSettings={
@@ -123,3 +121,34 @@ const Name='Sohan'
 const skills=['React.js','MongoDB','PostgreSql','express.js']
 
 console.log('The detail of the register user is:',registerUser(Name,skills))
+
+
+//practice question 10 
+const num=[1,2,3,4,5,6,7,8,9,10]  
+console.log('The result is:',Math.max(...num))
+
+
+//practice question 11 
+const cart = [
+  { id: 1, name: "Laptop", price: 1000 },
+  { id: 2, name: "Mouse", price: 20 },
+];
+
+const newItem = { id: 3, name: "Keyboard", price: 50 };
+
+const combined=[...cart,newItem] 
+console.log('Combined Items:',combined)
+
+//practice question 12 
+const scores=[45,89,23,76,95,12]  
+console.log(Math.max(...scores)) 
+console.log(Math.min(...scores))
+
+//practice question 13 
+const state = {
+  user: { name: "Hari", age: 22 },
+  settings: { theme: "light" }
+};
+
+const nestedObject={...state,settings:{...state.settings,theme:'dark'}} 
+console.log('nestedobject is:',nestedObject)
