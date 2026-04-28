@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #uploadfile{
+           color:green;
+           font-size:larger; 
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           font-weight: 700;
+        }
+    </style>
 </head>
 <body>
     
     <h1 id="h1id">Event Listeners</h1>
     <h2 id="h2id">Event handlers</h2>
-    
+    <input type="text" placeholder="Enter text here">
+     <h4 id="h4id">1</h4>
+
+     <input id='hiddenfile'  type="file" hidden> 
+
+     <div id="uploadfile">Upload File</div>
+
+    <h3 id="device">Select your Device</h3> 
+
+    <select name="mobile" id="mobilelist">
+        <option selected disabled>Select Mobile</option>
+         <option value="samsung">Samsung</option>
+         <option value="apple">Apple Iphone</option>
+         <option value="mi">Xiaomi</option>
+         <option value="google">Google</option>
+    </select>
     <script src="Events1.js"></script>
+    <script src="commonevent.js"></script>
 </body>
 </html>
