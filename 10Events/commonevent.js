@@ -76,3 +76,36 @@ main.appendChild(card)
 
 
 
+
+
+
+
+//event delegation 
+const divbutton=document.querySelector('#divbut') 
+const button=document.querySelector('#button') 
+divbutton.addEventListener('click',(e)=>{
+    console.log('Element object',e)
+    console.log('Element value:',e.target.innerText)
+    button.innerText=e.target.innerText 
+})
+
+
+divbutton.addEventListener('mouseover',(e)=>{
+     if(e.target.tagName='BUTTON'){
+        e.target.style.backgroundColor='red'
+     }
+})
+
+divbutton.addEventListener('mouseout',(e)=>{
+    if(e.target.tagName='BUTTON'){
+        e.target.style.backgroundColor=''
+    }
+})
+
+
+const boxdiv=document.querySelector('#boxdiv')
+console.log('boxdiv',boxdiv)
+window.addEventListener('mousemove',(e)=>{
+    boxdiv.style.top=e.clientY+ 'px'
+    boxdiv.style.left=e.clientX + 'px'
+})

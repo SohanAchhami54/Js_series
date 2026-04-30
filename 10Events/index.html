@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            position: relative;
+        }
         #uploadfile{
            color:green;
            font-size:larger; 
@@ -25,6 +28,19 @@
             height: 100%; 
             object-fit:contain;
         }
+        button{
+            color: cadetblue;
+            height: 200px; 
+            width: 200px;
+            
+        }
+        #boxdiv{
+            height: 200px; 
+            width: 200px;
+            color: bisque;
+            background-color: brown;
+            position:absolute
+        }
     </style>
 </head>
 <body>
@@ -39,8 +55,20 @@
      <div id="uploadfile">Upload File</div>
 
     <h3 id="device">Select your Device</h3> 
+    
+    <div id="divbut">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>
+    <p id="button">This is button content </p>
 
-    <select name="mobile" id="mobilelist">
+    <div id="boxdiv">
+        <h1>Hello</h1>
+    </div>
+
+    <select name="mobile"
+     id="mobilelist">
         <option selected disabled>Select Mobile</option>
          <option value="samsung">Samsung</option>
          <option value="apple">Apple Iphone</option>
