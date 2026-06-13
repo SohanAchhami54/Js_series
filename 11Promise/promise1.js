@@ -49,3 +49,22 @@ Promise.any([p6,p7,p8])
 .catch((err)=>{
     console.log(err)
 })
+
+// async function getCurrency(currency){
+//   fetch(`https://open.er-api.com/v6/latest/${currency}`)
+//   .then((res)=>res.json()) 
+//   .then((res)=>console.log('the value of the currency is:',res))
+//   .catch(err=>console.log('Error occured:',err))
+// }
+
+// await getCurrency('npr')
+
+
+// async function getWeatherData(city){
+//   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7a7d38e7a92fd4d388498fe1593bac94`)
+//   .then(res=>res.json()) 
+//   .then(res=>console.log('The Weather Data is:',res)) 
+//   .catch(err=>console.log('Error occur while fetching weather data:',err)) 
+// }
+// await getWeatherData('Kathmandu')
+
