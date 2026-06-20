@@ -50,14 +50,14 @@ Promise.any([p6,p7,p8])
     console.log(err)
 })
 
-// async function getCurrency(currency){
-//   fetch(`https://open.er-api.com/v6/latest/${currency}`)
-//   .then((res)=>res.json()) 
-//   .then((res)=>console.log('the value of the currency is:',res))
-//   .catch(err=>console.log('Error occured:',err))
-// }
+async function getCurrency(currency){
+  fetch(`https://open.er-api.com/v6/latest/${currency}`)
+  .then((res)=>res.json()) 
+  .then((res)=>console.log('the value of the currency is:',res))
+  .catch(err=>console.log('Error occured:',err))
+}
 
-// await getCurrency('npr')
+await getCurrency('npr')
 
 
 // async function getWeatherData(city){
